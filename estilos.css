@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+
+    background: radial-gradient(circle at top left, #5b21b6, transparent 35%),
+    radial-gradient(circle at bottom right, #be185d, transparent 35%),
+    #090014;
+
+    color: white;
+}
+
+form, fieldset {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 35px;
+
+    background-color: rgba(20, 10, 35, 0.95);
+
+    border: 1px solid #6d28d9;
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+
+    font-size: 32px;
+    letter-spacing: 3px;
+
+    color: #e879f9;
+}
+
+h3 {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+fieldset {
+    margin-bottom: 25px;
+    padding: 25px;
+
+    border: 1px solid #7e22ce;
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+legend {
+    padding: 0 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #d8b4fe;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.informacion label,
+.foto-asistente label,
+.observacion label,
+.metodo-pago label,
+.grupo-radios-pase > label,
+.grupo-checkbox-dias > label {
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    color: #e9d5ff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+
+    background-color: #160b27;
+    color: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="file"]:focus {
+    border-color: #e879f9;
+
+    box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
+}
+
+input::placeholder {
+    color: #8b7d9d;
+}
+
+.grupo-radios-pase,
+.grupo-checkbox-dias {
+    margin-bottom: 25px;
+}
+
+.grupo-radios-pase input,
+.grupo-checkbox-dias input {
+    margin-left: 15px;
+}
+
+.grupo-radios-pase label:not(:first-child),
+.grupo-checkbox-dias label:not(:first-child) {
+    color: #d1d5db;
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #d946ef;
+}
+
+.metodo-pago,
+.foto-asistente,
+.observacion {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+#comentario {
+    min-height: 100px;
+
+    padding: 12px;
+
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+
+    background-color: #160b27;
+    color: white;
+
+    resize: vertical;
+    outline: none;
+}
+
+#comentario:focus {
+    border-color: #e879f9;
+
+    box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
+}
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+            90deg,
+            #7e22ce,
+            #db2777
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 20px rgba(219, 39, 119, 0.5);
+}
+
+.info-ticket {
+    display: flex;
+    justify-content: space-around;
+}
+
+.foto-ticket {
+
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border: 2px solid #d946ef;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.foto-guardada {
+    padding-bottom: 30px;
+}
+
+.banner-festival {
+    text-align: center;
+    padding: 25px 20px;
+    margin: 0 auto 30px;
+    max-width: 900px;
+
+    background: linear-gradient(
+            90deg,
+            #7e22ce,
+            #db2777
+    );
+
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(219, 39, 119, 0.3);
+}
+
+.banner-festival h1 {
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 6px;
+    color: white;
+}
+
+.banner-festival p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .banner-festival h1 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    fieldset {
+        padding: 18px;
+    }
+
+    .grupo-radios-pase,
+    .grupo-checkbox-dias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .grupo-radios-pase input,
+    .grupo-checkbox-dias input {
+        margin-left: 0;
+    }
+}
