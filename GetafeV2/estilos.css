@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+
+    background: radial-gradient(circle at top left, #5b21b6, transparent 35%),
+    radial-gradient(circle at bottom right, #be185d, transparent 35%),
+    #090014;
+
+    color: white;
+}
+
+form, fieldset {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 35px;
+
+    background-color: rgba(20, 10, 35, 0.95);
+
+    border: 1px solid #6d28d9;
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+
+    font-size: 32px;
+    letter-spacing: 3px;
+
+    color: #e879f9;
+}
+
+h3 {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+fieldset {
+    margin-bottom: 25px;
+    padding: 25px;
+
+    border: 1px solid #7e22ce;
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+legend {
+    padding: 0 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #d8b4fe;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.informacion label,
+.foto-asistente label,
+.observacion label,
+.metodo-pago label,
+.grupo-radios-pase > label,
+.grupo-checkbox-dias > label {
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    color: #e9d5ff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+
+    background-color: #160b27;
+    color: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="file"]:focus {
+    border-color: #e879f9;
+
+    box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
+}
+
+input::placeholder {
+    color: #8b7d9d;
+}
+
+.grupo-radios-pase,
+.grupo-checkbox-dias {
+    margin-bottom: 25px;
+}
+
+.grupo-radios-pase input,
+.grupo-checkbox-dias input {
+    margin-left: 15px;
+}
+
+.grupo-radios-pase label:not(:first-child),
+.grupo-checkbox-dias label:not(:first-child) {
+    color: #d1d5db;
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #d946ef;
+}
+
+.metodo-pago,
+.foto-asistente,
+.observacion {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+#comentario {
+    min-height: 100px;
+
+    padding: 12px;
+
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+
+    background-color: #160b27;
+    color: white;
+
+    resize: vertical;
+    outline: none;
+}
+
+#comentario:focus {
+    border-color: #e879f9;
+
+    box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
+}
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+            90deg,
+            #7e22ce,
+            #db2777
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 20px rgba(219, 39, 119, 0.5);
+}
+
+.info-ticket {
+    display: flex;
+    justify-content: space-around;
+}
+
+.foto-ticket {
+
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border: 2px solid #d946ef;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.foto-guardada {
+    padding-bottom: 30px;
+}
+
+.banner-festival {
+    text-align: center;
+    padding: 25px 20px;
+    margin: 0 auto 30px;
+    max-width: 900px;
+
+    background: linear-gradient(
+            90deg,
+            #7e22ce,
+            #db2777
+    );
+
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(219, 39, 119, 0.3);
+}
+
+.banner-festival h1 {
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 6px;
+    color: white;
+}
+
+.banner-festival p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .banner-festival h1 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    fieldset {
+        padding: 18px;
+    }
+
+    .grupo-radios-pase,
+    .grupo-checkbox-dias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .grupo-radios-pase input,
+    .grupo-checkbox-dias input {
+        margin-left: 0;
+    }
+}
+
+/* ===== GETAFEST V2.0 ===== */
+
+input[type="password"] {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+
+    background-color: #160b27;
+    color: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: #e879f9;
+
+    box-shadow: 0 0 10px rgba(232, 121, 249, 0.3);
+}
+
+.error-login {
+    margin-bottom: 20px;
+    padding: 12px;
+
+    text-align: center;
+    font-size: 15px;
+
+    color: white;
+    background-color: rgba(220, 38, 38, 0.85);
+
+    border: 1px solid #f87171;
+    border-radius: 8px;
+}
+
+.form-inline {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-inline button {
+    width: auto;
+    padding: 12px 25px;
+}
+
+.acciones-ticket {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px;
+
+    background-color: rgba(20, 10, 35, 0.95);
+
+    border: 1px solid #6d28d9;
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.cabecera-listado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.cabecera-listado h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-reservas th {
+    padding: 12px 10px;
+
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #e879f9;
+    background-color: rgba(126, 34, 206, 0.25);
+}
+
+.tabla-reservas td {
+    padding: 12px 10px;
+
+    font-size: 14px;
+    color: #e5e7eb;
+
+    border-bottom: 1px solid #3b1a66;
+}
+
+.tabla-reservas tbody tr:hover td {
+    background-color: rgba(217, 70, 239, 0.08);
+}
+
+.boton-pase {
+    width: auto;
+    padding: 8px 18px;
+
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+.pase-digital {
+    max-width: 420px;
+    margin: 0 auto 30px;
+    padding: 30px 25px;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, rgba(126, 34, 206, 0.25), rgba(219, 39, 119, 0.15));
+
+    border: 2px dashed #d946ef;
+    border-radius: 18px;
+
+    box-shadow: 0 0 25px rgba(217, 70, 239, 0.25);
+}
+
+.pase-digital img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    border: 3px solid #d946ef;
+    border-radius: 50%;
+
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+}
+
+.pase-digital h3 {
+    margin: 20px 0 10px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.pase-digital p {
+    margin: 8px 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #e5e7eb;
+}
+
+.pase-digital p strong {
+    color: #e9d5ff;
+}
+
+.pase-digital .total {
+    margin-top: 20px;
+
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: #4ade80;
+}
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        padding: 20px;
+    }
+
+    .cabecera-listado h2 {
+        font-size: 22px;
+    }
+
+    .info-ticket {
+        flex-direction: column;
+    }
+}
